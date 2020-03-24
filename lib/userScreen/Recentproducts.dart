@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:merodokan/pages/detail_page.dart';
+import 'package:flutter/cupertino.dart';
 
 class Product extends StatefulWidget {
   @override
@@ -14,10 +16,10 @@ class _ProductState extends State<Product> {
       "price":20,
     },
     {
-      "name": "Biscuits",
-      "picture":"img/biscuits.jpg",
-      "old_price":25,
-      "price":20,
+      "name": "Britania",
+      "picture":"img/britania.jpg",
+      "old_price":55,
+      "price":50,
     },
     {
       "name": "Dettol",
@@ -26,21 +28,21 @@ class _ProductState extends State<Product> {
       "price":20,
     },
     {
-      "name": "Biscuits",
-      "picture":"img/biscuits.jpg",
+      "name": "Sabun",
+      "picture":"img/sabun.png",
       "old_price":25,
       "price":20,
     },
     {
-      "name": "Biscuits",
-      "picture":"img/biscuits.jpg",
-      "old_price":25,
+      "name": "Noon",
+      "picture":"img/nun.jpg",
+      "old_price":22,
       "price":20,
     },
     {
-      "name": "Dettol",
+      "name": "Dtol",
       "picture":"img/dettol.png",
-      "old_price":25,
+      "old_price":22,
       "price":20,
     },
 
@@ -80,7 +82,10 @@ class Single_prod extends StatelessWidget {
     return Container(
       child: Hero(tag: prod_name, 
       child: Material(
-        child: InkWell(onTap: (){},
+        child: InkWell(onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ProductDetails(product_detail_name: prod_name,
+        product_detail_new_price: prod_price,
+        product_detail_old_price: prod_old_price,
+        product_detail_picture: prod_picture),)),
         child: GridTile(
          footer: Container(
           color: Colors.white70, 
