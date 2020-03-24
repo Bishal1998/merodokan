@@ -98,7 +98,8 @@ class Single_prod extends StatelessWidget {
           ),
          ),
         child: Image.asset(prod_picture,
-        fit: BoxFit.cover,),),
+        fit: BoxFit.cover),
+        ),
         ),
       )),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import 'package:merodokan/pages/shopping_cart.dart';
 import 'package:merodokan/userScreen/horizontal.dart';
 import './Recentproducts.dart';
 
@@ -25,6 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
         autoplay: false,
         dotSize: 4.0,
         indicatorBgPadding: 2.0,
+        dotBgColor: Colors.transparent,
       ),
     );
     return Scaffold(
@@ -35,7 +37,9 @@ class _MyHomePageState extends State<MyHomePage> {
        elevation: 0.0,
        actions: <Widget>[
          IconButton(icon: Icon(Icons.search), color: Colors.white, onPressed: (){}),
-         IconButton(icon: Icon(Icons.shopping_cart), color: Colors.white, onPressed: (){}),
+         IconButton(icon: Icon(Icons.shopping_cart), color: Colors.white, onPressed: (){
+           Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Shopping_Cart()));
+         })
        ],
       ),
       drawer: Drawer(
@@ -73,10 +77,12 @@ class _MyHomePageState extends State<MyHomePage> {
              ),
            ),
            InkWell(
-            onTap: (){},
+            onTap: (){
+              Navigator.of(context).push(MaterialPageRoute(builder: (context)=>Shopping_Cart()));
+            },
             child: ListTile(
-              title: Text("Categories"),
-              leading: Icon(Icons.dashboard),
+              title: Text("Shopping Cart"),
+              leading: Icon(Icons.shopping_cart),
              ),
            ),
            InkWell(
