@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:merodokan/userScreen/cart_products.dart';
 class Shopping_Cart extends StatefulWidget {
   @override
   _Shopping_CartState createState() => _Shopping_CartState();
@@ -9,6 +9,7 @@ class _Shopping_CartState extends State<Shopping_Cart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
        title: Text("Mero Saman"),
        centerTitle: true,
@@ -18,7 +19,7 @@ class _Shopping_CartState extends State<Shopping_Cart> {
          IconButton(icon: Icon(Icons.search), color: Colors.white, onPressed: (){}),
        ],
       ),
-
+      body: Cart_Product(),
       bottomNavigationBar: Container(
        color: Colors.green,
        child: Row(
