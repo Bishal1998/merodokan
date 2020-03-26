@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './userScreen/MyHomePage.dart';
+import 'package:merodokan/pages/login.dart';
 
 void main()=>runApp(MaterialApp(debugShowCheckedModeBanner: false,home: MyApp(),));
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: login(),
     );
   }
 }

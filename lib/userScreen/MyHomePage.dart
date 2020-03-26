@@ -4,6 +4,7 @@ import 'package:merodokan/pages/shopping_cart.dart';
 import 'package:merodokan/userScreen/horizontal.dart';
 import './Recentproducts.dart';
 
+
 class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -13,7 +14,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     Widget image_carousel = Container(
-      height: 200.0,
+      height: 180.0,
       child: Carousel(
         boxFit: BoxFit.cover,
         images: [
